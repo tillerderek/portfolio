@@ -1,0 +1,9 @@
+##php and apache latest version with working dir set to /var/www/html and port 80 mapped to 8080 on localhost in a docker compose file
+version: '3'
+services:
+  php:
+    image: php:apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
