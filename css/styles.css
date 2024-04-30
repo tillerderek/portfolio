@@ -29,6 +29,7 @@ body {
 nav {
   text-align: center;
   margin-top: 1rem;
+  background-color: beige;
 }
 
 
@@ -44,24 +45,25 @@ a {
 }
 
 h1 {
-  position: absolute;
-  top: 5%;
-  left: 20%;
+
   color: white;
-  font-size: 5rem;
 }
 
 span {
-  position: absolute;
-  top: 30%;
-  left: 52%;
+  background-color: blacks;
   color: white;
   font-family: 'Silkscreen', cursive;
 }
 
+#info {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+
+}
 
 span::before {
-  margin-left: 3rem;
+  background-color: black;
   font-size: 2rem;
   color: green;
   content: 'web engineer';
