@@ -47,6 +47,7 @@ a {
 h1 {
   margin-top: .25rem;
   color: green;
+  background-color: black;
 }
 
 span {
