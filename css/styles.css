@@ -85,3 +85,25 @@ span::before {
     content: 'good ideas creator';
   }
 }
+
+/* Adjustments for mobile */
+@media screen and (max-width: 600px) {
+  body {
+    background-size: cover; /* Adjust background image size for mobile */
+  }
+
+  nav ul {
+    display: block; /* Change from inline to block for mobile */
+    margin-top: 0.5rem; /* Adjust margin for mobile */
+  }
+
+  nav li {
+    display: block; /* Change from inline to block for mobile */
+    margin-bottom: 0.5rem; /* Adjust margin for mobile */
+  }
+
+  a {
+    padding: 1rem; /* Adjust padding for mobile */
+    display: block; /* Change from inline to block for mobile */
+  }
+}
