@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,6 +8,7 @@
 
 body, html {
   height: 100%;
+  font-family: 'Vollkorn', serif;
 }
 
 html {
@@ -28,7 +29,6 @@ body {
 
 nav {
   text-align: center;
-  margin-top: 1rem;
   background-color: beige;
 }
 
@@ -37,7 +37,7 @@ li {
   display: inline;
 }
 
-a {
+header a {
   color: green;
   text-decoration: none;
   font-size: 2rem;
@@ -45,26 +45,41 @@ a {
 }
 
 h1 {
-  margin-top: .25rem;
+  margin: 0 auto;
   color: green;
-  background-color: black;
+  background-color: rgb(27, 21, 17);
 }
 
 span {
-  background-color: blacks;
+  background-color: rgb(27, 21, 17);
   color: white;
   font-family: 'Silkscreen', cursive;
+  padding: .5rem;
+}
+
+
+section p {
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: rgba(27, 21, 17, 0.797);
+  color: white;
+  width: 50%;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 #info {
   text-align: center;
   font-size: 2rem;
   color: white;
+  margin-bottom: 3rem;
 
 }
 
 span::before {
-  background-color: black;
+  background-color: rgb(27, 21, 17);
   font-size: 2rem;
   color: green;
   content: 'web engineer';
@@ -83,28 +98,81 @@ span::before {
     content: 'php freak';
   }
   100% {
-    content: 'good ideas creator';
+    content: 'python powered';
   }
+}
+
+footer {
+  font-family: 'volkorn', serif;
+  background-color: rgba(245, 245, 220, 0.845);
+  text-align: end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 /* Adjustments for mobile */
 @media screen and (max-width: 600px) {
   body {
-    background-size: cover; /* Adjust background image size for mobile */
+    background-size: cover; 
   }
 
   nav ul {
-    display: block; /* Change from inline to block for mobile */
-    margin-top: 0.5rem; /* Adjust margin for mobile */
+    display: block;
+    margin-top: 0.5rem; 
   }
 
   nav li {
-    display: block; /* Change from inline to block for mobile */
-    margin-bottom: 0.5rem; /* Adjust margin for mobile */
+    display: block;
+    margin-bottom: 0.25rem;
   }
 
-  a {
-    padding: 1rem; /* Adjust padding for mobile */
-    display: block; /* Change from inline to block for mobile */
+  nav li:last-of-type {
+    margin-bottom: 0;
   }
+
+  nav a {
+    display: block;
+    padding: 0.25rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+  }
+
+  section p {
+    margin: 1rem auto;
+    padding: .5rem;
+    background-color: rgba(27, 21, 17, 0.797);
+    color: white;
+    width: 50%;
+    border-radius: 1rem;
+    font-size: 1rem;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  footer {
+    font-family: 'volkorn', serif;
+    background-color: rgba(245, 245, 220, 0.845);
+    text-align: end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer a {
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+
 }
