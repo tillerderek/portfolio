@@ -1,16 +1,59 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+  --bulma-primary: #3e1d1052;
+  --bulma-secondary: #2b2a45;
+  --bulma-info: #242256;
+  --bulma-body-background-color: #ecede9;
+
+  --bulma-family-primary: "Vollkorn", serif;
+  --bulma-family-code: "Volkhorn", serif;
+
+  --radial-gradient-opacity: 0.5;
+
+  .is-family-primary,
+  .is-family-sans-serif,
+  .is-family-secondary {
+    font-family: "Volkhorn", serif !important;
+  }
+
+  .has-background-primary {
+    background-color: #ff480021 !important;
+  }
+
+  .has-background-secondary {
+    background-color: #0b0018d3!important;
+  }
+
+  #banner {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.8346456692913385) 74%, rgba(24,255,0,0.4120734908136483) 100%);
+    
+    box-shadow: 0 0 20px 20px #118d0357;
+  }
+
+  .footer {
+    --bulma-footer-padding: 1.5rem;
+    --bulma-footer-background-color: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .card-footer {
+    background-color: 	#f4f5f4;
+  }
+
+  .card-footer-item:hover {
+    background-color: #00ff0056;
+    border-radius: 15px;
+  }
+
 }
 
-body, html {
-  height: 100%;
-  font-family: 'Vollkorn', serif;
-}
-
+/* Basic styles */
 html {
   background: rgb(62,29,16);
   background: -moz-linear-gradient(142deg, rgba(62,29,16,1) 0%, rgba(121,9,9,1) 52%, rgba(149,123,87,1) 100%);
@@ -20,65 +63,38 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-size: 16px;
   background-image: url(../assets/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: 85%;
+  font-family: 'Vollkorn', serif;
+  height: 100vh;
 }
 
-nav {
-  text-align: center;
-  background-color: beige;
+/* Hero section */
+.hero {
+  min-height: 300px;
+  padding-top: 100px;
 }
 
+.project-card {
+  margin-bottom: 20px;
+}
 
 li {
-  display: inline;
+  list-style-type: none;
 }
 
-header a {
-  color: green;
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 7rem;
-}
-
-h1 {
-  margin: 0 auto;
-  color: green;
-  background-color: rgb(27, 21, 17);
-}
-
-span {
+#typed {
   background-color: rgb(27, 21, 17);
   color: white;
   font-family: 'Silkscreen', cursive;
   padding: .5rem;
 }
 
-
-section p {
-  margin: 3rem auto;
-  padding: 1rem;
-  background-color: rgba(27, 21, 17, 0.797);
-  color: white;
-  width: 50%;
-  border-radius: 1rem;
-  font-size: 1.5rem;
-  box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-#info {
-  text-align: center;
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 3rem;
-
-}
-
-span::before {
+#typed::before {
   background-color: rgb(27, 21, 17);
   font-size: 2rem;
   color: green;
@@ -91,88 +107,31 @@ span::before {
   0% {
     content: 'web engineer';
   }
-  33% {
+  25% {
     content: 'web engineer';
   }
-  66% {
+  50% {
     content: 'php freak';
+  }
+  75% {
+    content: 'django aficionado';
   }
   100% {
     content: 'python powered';
   }
 }
 
-footer {
-  font-family: 'volkorn', serif;
-  background-color: rgba(245, 245, 220, 0.845);
-  text-align: end;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer a {
-  font-size: 2rem;
-  color: black;
-  text-decoration: none;
-  margin-right: 1rem;
-}
-
-/* Adjustments for mobile */
+/* Add more styles as needed */
 @media screen and (max-width: 600px) {
   body {
     background-size: cover; 
   }
 
-  nav ul {
-    display: block;
-    margin-top: 0.5rem; 
+  .column {
+    margin: 0;
+    padding: 0;
   }
 
-  nav li {
-    display: block;
-    margin-bottom: 0.25rem;
-  }
 
-  nav li:last-of-type {
-    margin-bottom: 0;
-  }
-
-  nav a {
-    display: block;
-    padding: 0.25rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin: 0 auto;
-  }
-
-  section p {
-    margin: 1rem auto;
-    padding: .5rem;
-    background-color: rgba(27, 21, 17, 0.797);
-    color: white;
-    width: 50%;
-    border-radius: 1rem;
-    font-size: 1rem;
-    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
-
-  footer {
-    font-family: 'volkorn', serif;
-    background-color: rgba(245, 245, 220, 0.845);
-    text-align: end;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  footer a {
-    font-size: 1.5rem;
-    color: black;
-  }
-  
 
 }
