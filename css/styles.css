@@ -27,10 +27,8 @@
   }
 
   #banner {
-    background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0.8346456692913385) 74%, rgba(24,255,0,0.4120734908136483) 100%);
-    
-    box-shadow: 0 0 20px 20px #118d0357;
+    background-color: #1B1511;
+    box-shadow: 0 0 20px 20px #1B1511;
   }
 
   .footer {
@@ -43,7 +41,7 @@
   }
 
   .card-footer {
-    background-color: 	#f4f5f4;
+    background-color:#f4f5f4;
   }
 
   .card-footer-item:hover {
@@ -55,32 +53,30 @@
 
 /* Basic styles */
 html {
-  background: rgb(62,29,16);
-  background: -moz-linear-gradient(142deg, rgba(62,29,16,1) 0%, rgba(121,9,9,1) 52%, rgba(149,123,87,1) 100%);
-  background: -webkit-linear-gradient(142deg, rgba(62,29,16,1) 0%, rgba(121,9,9,1) 52%, rgba(149,123,87,1) 100%);
-  background: linear-gradient(142deg, rgba(62,29,16,1) 0%, rgba(121,9,9,1) 52%, rgba(149,123,87,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e1d10",endColorstr="#957b57",GradientType=1);
+  background: rgb(0,205,151);
+  background: linear-gradient(0deg, rgba(0,205,151,1) 0%, rgba(27,21,17,1) 100%);
 }
 
 body {
   overflow-x: hidden;
   font-size: 16px;
-  background-image: url(../assets/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 85%;
   font-family: 'Vollkorn', serif;
   height: 100vh;
+}
+
+.card {
+  display:flex;
+  flex-direction: column;
+  height: 55vh;
+}
+.card-footer {
+  margin-top: auto;
 }
 
 /* Hero section */
 .hero {
   min-height: 300px;
   padding-top: 100px;
-}
-
-.project-card {
-  margin-bottom: 20px;
 }
 
 li {
@@ -114,24 +110,9 @@ li {
     content: 'php freak';
   }
   75% {
-    content: 'django aficionado';
+    content: 'django dude';
   }
   100% {
     content: 'python powered';
   }
-}
-
-/* Add more styles as needed */
-@media screen and (max-width: 600px) {
-  body {
-    background-size: cover; 
-  }
-
-  .column {
-    margin: 0;
-    padding: 0;
-  }
-
-
-
 }
