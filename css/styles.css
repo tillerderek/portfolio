@@ -130,6 +130,31 @@ body {
 
 }
 
+.cursor{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 2px solid #ffee00be;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.grow, .grow-small{
+  transform: scale(4);
+  background: white;
+  mix-blend-mode: difference; 
+  border: none;
+}
+
+.grow-small{
+  transform: scale(2);
+}
+
 #innerCard {
   display: flex;
   flex-direction: column;
