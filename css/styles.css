@@ -1,11 +1,15 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap');
 
 :root {
   --bulma-primary: #3e1d1052;
   --bulma-secondary: #2b2a45;
-  --bulma-info: #242256;
+  --bulma-info: #ffa200be;
   --bulma-body-background-color: #ecede9;
+
+  .has-text-info {
+    color: #de9503 !important;
+  }
 
   --bulma-family-primary: "Vollkorn", serif;
   --bulma-family-code: "Volkhorn", serif;
@@ -15,7 +19,7 @@
   .is-family-primary,
   .is-family-sans-serif,
   .is-family-secondary {
-    font-family: "Volkhorn", serif !important;
+    font-family: "Fira Mono", monospace !important;
   }
 
   .has-background-primary {
@@ -35,22 +39,14 @@
   .card-header {
     background-color: rgb(27, 21, 17);
     width: 100%;
-    box-shadow: 0 10px 10px -5px rgba(0, 200, 0, 0.434);
+    box-shadow: 0 20px 20px -15px #ffa200be;
     max-height: 95px;
   }
 
 
-  /* #banner {
-    background-color: #1B1511;
-    box-shadow: 0 0 20px 20px #1B1511;
-    height: min-content;
-    margin: auto 0;
-  } */
-
-  /* #banner {
-    padding: 2rem;
-
-  } */
+.card-header-title {
+  padding-top: 1.5rem;
+}
 
   .card-footer {
     background-color:#ffffff;
@@ -178,10 +174,14 @@ body {
 
 #innerCard a:hover {
   color: #008a53;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.2s ease;
   }
+
+a {
+  font-weight: bold;
+}
 
 
 .card-footer {
@@ -252,9 +252,6 @@ span {
     align-items: center;
   }
 
-  .card {
-    margin-top: 2rem;
-  }
 
   #banner {
     max-height: max-content;

@@ -2,6 +2,7 @@ gsap.to("#top", {
   duration: 2,
   y: 70,
   ease: "bounce",
+  delay: 2
 });
 
 const innerCard = document.querySelector("#innerCard");
@@ -11,6 +12,7 @@ innerCard.addEventListener("mouseenter", () => {
     duration: .5,
     boxShadow: "10px 15px 15px 10px rgb(255,0,0)",
     ease: "expo inOut",
+    scale: 1.15
   })
 });
 
@@ -20,7 +22,7 @@ cards.forEach(card => {
   gsap.set(card, { transformOrigin: 'center' });
 
   card.addEventListener('mouseenter', () => {
-    gsap.to(card, { duration: 0.3, scale: 1.05, boxShadow: '0 0 20px rgba(0,0,0,0.3)' });
+    gsap.to(card, { duration: 0.3, scale: 1.02, boxShadow: '0 0 20px rgba(0,0,0,0.3)' });
   });
 
   card.addEventListener('mouseleave', () => {
@@ -31,7 +33,6 @@ cards.forEach(card => {
 gsap.from(cards, {
   duration: 1,
   x: (index) => (index % 2 === 0 ? '-100vw' : '100vw'), // Alternate between left and right
-  opacity: 0,
   stagger: 0.2,
   ease: 'power2.out',
   scrollTrigger: {
@@ -76,3 +77,12 @@ cursorScale.forEach(link => {
     cursor.classList.remove('grow-small');
   });
 })
+
+const footerLinks = document.querySelectorAll('.card-footer');
+
+
+    gsap.from(footerLinks, {
+      duration: 1.5,
+      ease:  "elastic.in",
+      y: -4000,
+    });
