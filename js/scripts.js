@@ -1,7 +1,17 @@
 gsap.to("#top", {
-  duration: 1,
-  y: 20,
+  duration: 2,
+  y: 70,
   ease: "bounce",
+});
+
+const innerCard = document.querySelector("#innerCard");
+
+innerCard.addEventListener("mouseenter", () => {
+  gsap.to(innerCard, {
+    duration: .5,
+    boxShadow: "10px 15px 15px 10px rgb(255,0,0)",
+    ease: "expo inOut",
+  })
 });
 
 const cards = document.querySelectorAll('.card');
@@ -29,19 +39,3 @@ gsap.from(cards, {
     start: 'top 80%', // Start the animation when the top of the container is 80% from the top of the viewport
   },
 });
-
-const tl = gsap.timeline({ repeat: -1, repeatDelay: 10 });
-
-tl.addCallback(jiggleButton);
-
-function jiggleButton() {
-  const button = document.querySelector('.button');
-
-  gsap.to(button, {
-    duration: 0.2,
-    x: 10,
-    yoyo: true,
-    repeat: 3,
-    ease: 'power2.inOut'
-  });
-}
